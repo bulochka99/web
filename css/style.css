@@ -11,7 +11,7 @@ body{
 
 header{
     color: white;
-background-color: #2e8000;
+background-color: #FF1493;
 padding: 20px;
 }
 
@@ -23,16 +23,16 @@ main{
 
 footer{
     color: white;
-    background-color: #2e8000;
+    background-color: #FF1493;
     padding: 20px;
 }
 
 aside{
-    background-color: #bd9853;
+    background-color: #C71585;
     padding: 20px;
 }
 section{
-    background-color: burlywood;
+    background-color: pink;
     padding: 20px;
     flex-grow: 1;
 }
@@ -46,4 +46,27 @@ a{
     font-size: 1.5em;
     font-weight: bold;
     text-align:center;
+}
+
+nav{
+    margin-top: 10px;
+    background-color: #C71585;
+    border: 1px solid white;
+}
+
+nav>ul{
+list-style:none;
+display: flex;
+flex-direction: row;
+margion:0;
+padding:0;
+}
+
+nav>ul>li>a{
+    display: block;
+    padding:10px 20px;
+}
+
+nav> ul> li> a:hover{
+    background-color: burlywood;
 }
