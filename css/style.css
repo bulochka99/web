@@ -94,3 +94,10 @@ nav> ul> li> a:hover{
 .reg-wrapper{
     width: 400px;
 }
+.string>select{
+    width: 300px;
+}
+input[type="reset"]{
+    flex-grow:0;
+    flex-basis: auto;
+}
