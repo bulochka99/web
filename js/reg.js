@@ -2,7 +2,7 @@ $(() => {
     $("#send").prop("disabled", !$("#agreement").prop("checked"));
 
     $("#agreement").click(function(){
-        $("send").prop("disabled",!$(this).prop("checked"));
+        $("#send").prop("disabled",!$(this).prop("checked"));
     });
 
     $("input[type='reset']").click(function(){
@@ -11,20 +11,22 @@ $(() => {
 
     $("#send").click(function(){
         error= "";
-        $("#form").find("[required]")/each(function(){
+
+        $("#form").find("[required]").each(function(){
             if ($(this).val()== ""){
-                error += $(this).data ("desc") + "<br>";
+                error += $(this).data("desc") + "<br>";
             }
         });
+
+
         if (error != ""){
             $("#error").html("Не заполнены поля: <br>" + error);
             return false;
         }
 
-
-
-        if ($("pass").val() !=$("#pass2").val()){
-            $("error").text("Пароли не совпадают");
+        if ($("#pass").val() != $("#pass2").val()){
+            $("#error").text("Пароли не совпадают");
+            
             return false;
         }
         return true;

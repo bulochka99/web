@@ -1,6 +1,6 @@
 <section>
     <h1>Регистрация</h1>
-    <!-- <div class="error" id="error"><?=$info;?></div> -->
+    <div class="error" id="error"><?=$info ?? ""?></div>
     <div class="error" id="error"></div>
 <form method="post" id="form">
         <div class="reg-wrapper">
@@ -10,7 +10,7 @@
         </div>
         <div class="string">
                 <label for="">Имя:</label>
-                <input data-desc="Имя" id="pass" type="text" name="Имя" required>
+                <input data-desc="Имя" id="name" type="text" name="name" required>
         </div>
         <div class="string">
                 <label for="">Отчество:</label>
@@ -50,11 +50,11 @@
             </div>
             <div class="string">
                     <label for="">Пароль еще раз:</label>
-                    <input data-desc="Password" id="pass2" type="password" name="password" required>
+                    <input data-desc="Password" id="pass2" type="password" name="one_more_pass" required>
              </div>
          <div class="string">
              <label for="">Email:</label>
-             <input data-desc="Login" type="text" name="login" required>
+             <input data-desc="Login" type="text" name="email" required>
          </div>
         <div class="agreement">
             <label for="">Соглашение:</label>
@@ -63,7 +63,7 @@
         </div>
                 <div class="string buttons">
                     <input type="reset" value= "Очистить">
-                    <button id="send">Отправить</button>
+                    <button id="send" name="send">Отправить</button>
                 </div>
              </div>
         </form>
