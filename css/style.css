@@ -48,10 +48,19 @@ a{
     text-align:center;
 }
 
-nav{
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
     background-color: #C71585;
-    border: 1px solid white;
+    border: 1px solid white; 
+
+}
+
+nav{
+    flex-grow: 1;
+
 }
 
 nav>ul{

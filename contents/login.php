@@ -13,23 +13,10 @@
 </div>
 <div class="string buttons">
      
-<button name="entrance"> Войти</button>
-     <button id="reg-btn" name="reg-btn" onclick="document.location='/web/registration'">Регистрация</button>
+<button name="entrance">Войти</button>
+     <button id="reg-btn" onclick="document.location='/web/registration'">Регистрация</button>
      </div>
      </div>
 </form> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                </section>  
+ </section>  
                                 
