@@ -2,6 +2,7 @@
 
 require_once "pouter.php";
 require_once "base.php";
+require_once "user.php";
 $ur1 = Pouter::parse();
 
 $pagelink = $ur1 == "" ? "index": $ur1;
@@ -27,6 +28,24 @@ $base = new Base($connection);
 
 unset($connection);
 
+if(isset($_POST["entrance"]))
+{
+    $login = $_POST["login"];
+    $password = $_POST["password"];
+    $user = $base->loadUser($login,$password);
+
+    if($user == false)
+        $info = "Не верный логин или пароль";
+    else
+    {
+        //$session->addData("user", $user);
+        //$_SESSOIN["user"] = $user;
+        //header("location: " . SITE_DIR . "user");
+        $info = "Вы вошли под именем " . $user->getName();
+    }
+
+}
+
 if(isset($_POST["send"]))
 {
     $name = $_POST["name"];
@@ -38,7 +57,8 @@ if(isset($_POST["send"]))
         $info = "Пароли не совпали!";
     else
     {
-        $userData = $base->saveUser($name, $login, $password);
+        $user = new User($name,$login,$password);
+        $userData = $base->saveUser($user);
         if( $userData == false)
             $info = "Не зарегистрированы";
         else 

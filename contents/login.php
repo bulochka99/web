@@ -1,6 +1,6 @@
 <section>
      <h1> Авторизация </h1>
-<!-- <div class="error" id="error"><?=$info;?></div> -->
+<div class="error" id="error"><?=$info?? "";?></div> 
 <form method="post" id="form">
      <div class="reg-wrapper">
 <div class="string">
@@ -13,7 +13,7 @@
 </div>
 <div class="string buttons">
      
-<button> Войти</button>
+<button name="entrance"> Войти</button>
      <button id="reg-btn" name="reg-btn" onclick="document.location='/web/registration'">Регистрация</button>
      </div>
      </div>
